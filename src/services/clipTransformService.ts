@@ -1,7 +1,7 @@
 import { HelixClip } from 'twitch';
 import { HelixClipExtended } from '../types/interfaces/helixClipExtended.interface';
 
-const CLIP_MEDIA_SERVER_URL = 'https://clips-media-assets2.twitch.tv/';
+const CLIP_MEDIA_SERVER_URL = 'https://clips-media-assets2.twitch.tv';
 
 export class ClipTransformService {
   addExtraDataToClip(clipsData: HelixClip[]): HelixClipExtended[] {
