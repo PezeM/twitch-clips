@@ -18,8 +18,11 @@
     "noImplicitThis": false,
     "strictNullChecks": true,
     "composite": true,
+    "resolveJsonModule": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "clientSecret.json",
+    "tokens/token.json"
   ]
 }
