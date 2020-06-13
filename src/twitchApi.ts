@@ -1,6 +1,6 @@
 import TwitchClient, { AccessToken, HelixUser } from 'twitch';
 import { writeFileSync } from 'fs';
-import {Config} from './configs/config';
+import { Config } from './configs/config';
 
 class TwitchApi {
   public readonly twitchClient: TwitchClient;
@@ -16,8 +16,8 @@ class TwitchApi {
         clientSecret,
         refreshToken,
         onRefresh: (token: AccessToken) => {
-            console.log('new token', token);
-          writeFileSync('../tokens/token.json', JSON.stringify(token));
+          console.log('New access token', token);
+          writeFileSync('token.json', JSON.stringify(token));
         },
       },
     );
@@ -33,7 +33,7 @@ class TwitchApi {
       {
         endDate: endDate.toISOString(),
         startDate: startDate.toISOString(),
-        limit: 100
+        limit: 100,
       },
     );
 

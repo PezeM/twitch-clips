@@ -1,4 +1,5 @@
 import { GatherClipsData } from './gatherClipsData';
 
-const gatherClipsData = new GatherClipsData("h2p_gucio");
+const userName = process.argv[2];
+const gatherClipsData = new GatherClipsData(userName);
 gatherClipsData.getAllClipsDataForUser();

@@ -85,7 +85,7 @@ export class GatherClipsData {
 
   private async getUser() {
     if (!this.userName || this.userName.length <= 0)
-      throw new Error(`Passed userName to gatherClipsData is null.`);
+      throw new Error(`Passed userName to gatherClipsData is empty or undefined.`);
 
     const user = await twitchApi.getUserByName(this.userName);
     if (!user)
